@@ -7,8 +7,6 @@
 #
 # All rights reserved.
 
-from multiprocessing.connection import Client
-
 from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
 from pymongo import MongoClient
 from pyrogram import Client
@@ -25,7 +23,7 @@ if config.MONGO_DB_URI is None:
         "No MONGO DB URL found.. Your Bot will work on Yukki's Database"
     )
     temp_client = Client(
-        "Yukki",
+        "Zebo",
         bot_token=config.BOT_TOKEN,
         api_id=config.API_ID,
         api_hash=config.API_HASH,
