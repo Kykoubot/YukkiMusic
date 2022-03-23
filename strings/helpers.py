@@ -66,7 +66,7 @@ HELP_3 = """✅<u>**Bot Commands:**</u>
 
 /stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
 
-/sudolist - Check Sudo Users of Yukki Music Bot
+/msudolist - Check Sudo Users of Yukki Music Bot
 
 /lyrics [Music Name] - Searches Lyrics for the particular Music on web.
 
@@ -79,8 +79,8 @@ HELP_3 = """✅<u>**Bot Commands:**</u>
 /queue or /cqueue- Check Queue List of Music."""
 
 HELP_4 = """✅<u>**Extra  Commands:**</u>
-/start - Start the Music Bot.
-/help  - Get Commands Helper Menu with detailed explanations of commands.
+/mstart - Start the Music Bot.
+/mhelp  - Get Commands Helper Menu with detailed explanations of commands.
 /ping- Ping the Bot and check Ram, Cpu etc stats of Bot.
 
 ✅<u>**Group Settings:**</u>
@@ -111,8 +111,8 @@ HELP_4 = """✅<u>**Extra  Commands:**</u>
 3️⃣ **Play Type** [Everyone or Admins] - If admins, only admins present in group can play music on voice chat."""
 
 HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
-/addsudo [Username or Reply to a user]
-/delsudo [Username or Reply to a user]
+/maddsudo [Username or Reply to a user]
+/mdelsudo [Username or Reply to a user]
 
 🛃**<u>HEROKU:</u>**
 /usage - Dyno Usage.
@@ -123,12 +123,13 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /set_var [Var Name] [Value] - Set a Var or Update a Var on heroku or .env. Seperate Var and its Value with a space.
 
 🤖**<u>BOT COMMANDS:</u>**
-/reboot - Reboot your Bot. 
+/mreboot - Reboot your Bot. 
 /update - Update Bot.
 /speedtest - Check server speeds
 /maintenance [enable / disable] 
 /logger [enable / disable] - Bot logs the searched queries in logger group.
 /get_log [Number of Lines] - Get log of your bot from heroku or vps. Works for both.
+/autoend [enable|disable] - Enable Auto stream end after 3 mins if no one is listening.
 
 📈**<u>STATS COMMANDS:</u>**
 /activevoice - Check active voice chats on bot.
@@ -146,9 +147,9 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /blockedusers - Check blocked Users Lists
 
 👤**<u>GBAN FUNCTION:</u>**
-/gban [Username or Reply to a user] - Gban a user from bot's served chat and stop him from using your bot.
-/ungban [Username or Reply to a user] - Remove a user from Bot's gbanned List and allow him for using your bot
-/gbannedusers - Check Gbanned Users Lists
+/mgban [Username or Reply to a user] - Gban a user from bot's served chat and stop him from using your bot.
+/mungban [Username or Reply to a user] - Remove a user from Bot's gbanned List and allow him for using your bot
+/mgbannedusers - Check Gbanned Users Lists
 
 🎥**<u>VIDEOCALLS FUNCTION:</u>**
 /set_video_limit [Number of Chats] - Set a maximum Number of Chats allowed for Video Calls at a time. Default to 3 chats.
