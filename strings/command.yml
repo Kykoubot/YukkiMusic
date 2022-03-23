@@ -86,7 +86,8 @@ VARS_COMMAND : ["vars", "config"]
 
 #Basic Bot Commands
 UPDATE_COMMAND : ["update"]
-REBOOT_COMMAND : ["reboot"]
+REBOOT_COMMAND : ["mreboot"]
+AUTOEND_COMMAND : ["autoend"]
 
 #Private Bot Mode
 AUTHORIZE_COMMAND : ["authorize"]
@@ -99,13 +100,13 @@ UNBLOCK_COMMAND : ["unblock"]
 BLOCKED_COMMAND : ["blockedusers"]
 
 #sPEEDTEST
-SPEEDTEST_COMMAND : ["speedtest"]
+SPEEDTEST_COMMAND : ["mspeedtest"]
 
 #Voice chat commands
 ACTIVEVC_COMMAND : ["activevoice"]
 ACTIVEVIDEO_COMMAND : ["activevideo"]
 
 #Gban Commands
-GBAN_COMMAND : ["gban"]
-UNGBAN_COMMAND : ["ungban"]
-GBANNED_COMMAND : ["gbannedusers"]
+GBAN_COMMAND : ["mgban"]
+UNGBAN_COMMAND : ["mungban"]
+GBANNED_COMMAND : ["mgbannedusers"]
