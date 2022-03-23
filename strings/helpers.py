@@ -84,7 +84,7 @@ HELP_4 = """✅<u>**Extra  Commands:**</u>
 /ping- Ping the Bot and check Ram, Cpu etc stats of Bot.
 
 ✅<u>**Group Settings:**</u>
-/settings - Get a complete group's settings with inline buttons
+/msettings - Get a complete group's settings with inline buttons
 
 🔗 **Options in Settings:**
 
