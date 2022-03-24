@@ -58,7 +58,7 @@ async def lrsearch(client, message: Message, _):
             [
                 InlineKeyboardButton(
                     text=_["L_B_1"],
-                    url=f"https://t.me/{app.username}?start=lyrics_{ran_hash}",
+                    url=f"https://t.me/{app.username}?mstart=lyrics_{ran_hash}",
                 ),
             ]
         ]
