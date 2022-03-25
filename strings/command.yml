@@ -95,9 +95,9 @@ UNAUTHORIZE_COMMAND : ["unauthorize"]
 AUTHORIZED_COMMAND : ["authorized"]
 
 #Block Users Command
-BLOCK_COMMAND : ["block"]
-UNBLOCK_COMMAND : ["unblock"]
-BLOCKED_COMMAND : ["blockedusers"]
+BLOCK_COMMAND : ["mblock"]
+UNBLOCK_COMMAND : ["munblock"]
+BLOCKED_COMMAND : ["mblockedusers"]
 
 #sPEEDTEST
 SPEEDTEST_COMMAND : ["mspeedtest"]
