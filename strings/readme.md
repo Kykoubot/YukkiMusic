@@ -5,6 +5,7 @@
 | Code | Language | Contributor |
 |-|-------|-------|
 | en | English | Thanks to [TeamYukki](https://t.me/TeamYukki)
+| id | Indonesia | Thanks to [ZeaFeya](https://t.me/zeafeya)
 | si | Sinhala  | Thanks to [Damantha](https://t.me/MrItzme) & [Supun](https://t.me/Supunma)
 | hi | Hindi  | Thanks to [TeamYukki](https://t.me/TeamYukki)
 
