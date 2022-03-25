@@ -12,7 +12,7 @@
 
 # Bot Commands
 PING_COMMAND : ["ping"]
-START_COMMAND : ["mstart"]
+START_COMMAND : ["start", "mstart"]
 HELP_COMMAND : ["mhelp"]
 SETTINGS_COMMAND : ["msettings", "msetting"]
 RELOAD_COMMAND : ["admincache", "reload"]
@@ -107,6 +107,6 @@ ACTIVEVC_COMMAND : ["activevoice"]
 ACTIVEVIDEO_COMMAND : ["activevideo"]
 
 #Gban Commands
-GBAN_COMMAND : ["mgban"]
-UNGBAN_COMMAND : ["mungban"]
-GBANNED_COMMAND : ["mgbannedusers"]
+GBAN_COMMAND : ["gban"]
+UNGBAN_COMMAND : ["ungban"]
+GBANNED_COMMAND : ["gbannedusers"]
