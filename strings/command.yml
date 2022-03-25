@@ -15,7 +15,7 @@ PING_COMMAND : ["ping"]
 START_COMMAND : ["start", "mstart"]
 HELP_COMMAND : ["mhelp"]
 SETTINGS_COMMAND : ["msettings", "msetting"]
-RELOAD_COMMAND : ["admincache", "reload"]
+RELOAD_COMMAND : ["madmincache", "reload"]
 GSTATS_COMMAND : ["gstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
@@ -33,7 +33,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
-SONG_COMMAND : ["song", "video"]
+SONG_COMMAND : ["msong", "mvideo"]
 LYRICS_COMMAND : ["lyrics"]
 
 
