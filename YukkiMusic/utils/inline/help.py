@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from YukkiMusic import app
 
 
-def mhelp_pannel(_, START: Union[bool, int] = None):
+def help_pannel(_, START: Union[bool, int] = None):
     first = [
         InlineKeyboardButton(
             text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
@@ -64,7 +64,7 @@ def mhelp_pannel(_, START: Union[bool, int] = None):
     return upl
 
 
-def mhelp_back_markup(_):
+def help_back_markup(_):
     upl = InlineKeyboardMarkup(
         [
             [
@@ -81,7 +81,7 @@ def mhelp_back_markup(_):
     return upl
 
 
-def mprivate_help_panel(_):
+def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
