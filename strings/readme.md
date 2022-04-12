@@ -5,13 +5,13 @@
 | Code | Language | Contributor |
 |-|-------|-------|
 | en | English | Thanks to [TeamYukki](https://t.me/TeamYukki)
-| id | Indonesia | Thanks to [ZeaFeya](https://t.me/zeafeya)
+| id | Indonesia | Thanks to [Zeafeya](https://t.me/Zeafeya)
 | si | Sinhala  | Thanks to [Damantha](https://t.me/MrItzme) & [Supun](https://t.me/Supunma)
 | hi | Hindi  | Thanks to [TeamYukki](https://t.me/TeamYukki)
 
 
 ### We need your help in translating Yukki Music Bot. How to Contribute?
 
-You can edit [`en.yml`](https://github.com/NotReallyShikhar/public/blob/master/strings/langs/en.yml) present in langs folder to your own language and send us the edited file at [@YukkiSupport](https://t.me/YukkiSupport)
+You can edit [`en.yml`](https://github.com/TeamYukki/public/blob/master/strings/langs/en.yml) present in langs folder to your own language and send us the edited file at [@YukkiSupport](https://t.me/YukkiSupport)
 
 - > Points to remember while editing : <br> - Make sure you dont change any `{0}` or `{1}` while editing your codes <br> - Don’t change "general_1" or any other such keys present.
