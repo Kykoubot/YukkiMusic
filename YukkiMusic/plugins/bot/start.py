@@ -192,7 +192,7 @@ async def start_comm(client, message: Message, _):
             OWNER = OWNER_ID[0]
         except:
             OWNER = None
-        out = mprivate_panel(_, app.username, OWNER)
+        out = private_panel(_, app.username, OWNER)
         if config.START_IMG_URL:
             try:
                 await message.reply_photo(
@@ -229,7 +229,7 @@ async def start_comm(client, message: Message, _):
 )
 @LanguageStart
 async def testbot(client, message: Message, _):
-    out = mstart_pannel(_)
+    out = start_pannel(_)
     return await message.reply_text(
         _["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
@@ -269,7 +269,7 @@ async def welcome(client, message: Message):
                     )
                     return await app.leave_chat(chat_id)
                 userbot = await get_assistant(message.chat.id)
-                out = mstart_pannel(_)
+                out = start_pannel(_)
                 await message.reply_text(
                     _["start_3"].format(
                         config.MUSIC_BOT_NAME,
