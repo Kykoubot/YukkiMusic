@@ -13,12 +13,12 @@ from YukkiMusic.utils.database import get_banned_users, get_gbanned
 
 async def init():
     if len(config.STRING_SESSIONS) == 0:
-        LOGGER("ChiefMusic").error(
+        LOGGER("YukkiMusic").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
         return
     if not config.SPOTIFY_CLIENT_ID and not config.SPOTIFY_CLIENT_SECRET:
-        LOGGER("ChiefMusic").warning(
+        LOGGER("YukkiMusic").warning(
             "No Spotify Vars defined. Your bot won't be able to play spotify queries."
         )
     try:
@@ -37,22 +37,22 @@ async def init():
         if hasattr(imported_module, "__MODULE__") and imported_module.__MODULE__:
             if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
                 HELPABLE[imported_module.__MODULE__.lower()] = imported_module
-    LOGGER("ChiefMusic.plugins").info("Successfully Imported All Modules ")
+    LOGGER("YukkiMusic.plugins").info("Successfully Imported All Modules ")
     await userbot.start()
     await Yukki.start()
-    LOGGER("ChiefMusic").info("Assistant Started Sucessfully")
+    LOGGER("YukkiMusic").info("Assistant Started Sucessfully")
     try:
         await Yukki.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("ChiefMusic").error(
+        LOGGER("YukkiMusic").error(
             "Please ensure the voice call in your log group is active."
         )
         exit()
 
     await Yukki.decorators()
-    LOGGER("ChiefMusic").info("ChiefMusic Started Successfully")
+    LOGGER("YukkiMusic").info("ChiefMusic Started Successfully")
     await idle()
     await app.stop()
     await userbot.stop()
@@ -60,4 +60,4 @@ async def init():
 
 if __name__ == "__main__":
     app.run(init())
-    LOGGER("ChiefMusic").info("Stopping ChiefMusic! GoodBye")
+    LOGGER("YukkiMusic").info("Stopping ChiefMusic! GoodBye")
