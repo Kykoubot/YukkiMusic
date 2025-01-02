@@ -36,6 +36,6 @@ app = YukkiBot()
 # Assistant Client
 userbot = Userbot()
 
-from .platforms import Platforms
-Platform = Platforms()
+from .platforms import PlatForms
+Platform = PlatForms()
 
