@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import random
 from os.path import realpath
 
@@ -14,8 +5,7 @@ import aiohttp
 from aiohttp import client_exceptions
 
 
-class UnableToFetchCarbon(Exception):
-    pass
+from YukkiMusic.utils.exceptions import UnableToFetchCarbon
 
 
 themes = [
@@ -76,7 +66,7 @@ colour = [
 ]
 
 
-class CarbonAPI:
+class Carbon:
     def __init__(self):
         self.language = "auto"
         self.drop_shadow = True
@@ -104,7 +94,7 @@ class CarbonAPI:
             params["widthAdjustment"] = self.width_adjustment
             try:
                 request = await ses.post(
-                    "https://carbonara.vercel.app/api/cook",
+                    "https://carbonara.solopov.dev/api/cook",
                     json=params,
                 )
             except client_exceptions.ClientConnectorError:

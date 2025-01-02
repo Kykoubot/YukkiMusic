@@ -1,21 +1,10 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
-import re
+import re, aiohttp
 from typing import Union
-
-import aiohttp
 from bs4 import BeautifulSoup
 from youtubesearchpython.__future__ import VideosSearch
 
 
-class RessoAPI:
+class Resso:
     def __init__(self):
         self.regex = r"^(https:\/\/m.resso.com\/)(.*)$"
         self.base = "https://m.resso.com/"
@@ -42,7 +31,7 @@ class RessoAPI:
                 des = tag.get("content", None)
                 try:
                     des = des.split("·")[0]
-                except:
+                except Exception:
                     pass
         if des == "":
             return

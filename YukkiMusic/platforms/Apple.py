@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import re
 from typing import Union
 
@@ -15,7 +6,7 @@ from bs4 import BeautifulSoup
 from youtubesearchpython.__future__ import VideosSearch
 
 
-class AppleAPI:
+class Apple:
     def __init__(self):
         self.regex = r"^(https:\/\/music.apple.com\/)(.*)$"
         self.base = "https://music.apple.com/in/playlist/"
@@ -67,20 +58,14 @@ class AppleAPI:
                     return False
                 html = await response.text()
         soup = BeautifulSoup(html, "html.parser")
-        applelinks = soup.find_all(
-            "meta", attrs={"property": "music:song"}
-        )
+        applelinks = soup.find_all("meta", attrs={"property": "music:song"})
         results = []
         for item in applelinks:
             try:
-                xx = (
-                    ((item["content"]).split("album/")[1]).split("/")[
-                        0
-                    ]
-                ).replace("-", " ")
-            except:
-                xx = ((item["content"]).split("album/")[1]).split(
-                    "/"
-                )[0]
+                xx = (((item["content"]).split("album/")[1]).split("/")[0]).replace(
+                    "-", " "
+                )
+            except Exception:
+                xx = ((item["content"]).split("album/")[1]).split("/")[0]
             results.append(xx)
         return results, playlist_id
