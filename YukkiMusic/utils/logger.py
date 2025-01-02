@@ -18,25 +18,27 @@ async def play_logs(message, streamtype):
             chatusername = f"@{message.chat.username}"
         else:
             chatusername = "Private Group"
+
         logger_text = f"""
-**ZEBO PLAY LOG**
+**{app.mention} Play Log**
 
-**Chat:** {message.chat.title} [`{message.chat.id}`]
-**User:** {message.from_user.mention}
-**Username:** @{message.from_user.username}
+**Chat ID:** `{message.chat.id}`
+**Chat Name:** {message.chat.title}
+**Chat Username:** {chatusername}
+
 **User ID:** `{message.from_user.id}`
-**Chat Link:** {chatusername}
+**Name:** {message.from_user.mention}
+**Username:** @{message.from_user.username}
 
-**Query:** {message.text}
-
-**StreamType:** {streamtype}"""
+**Query:** {message.text.split(None, 1)[1]}
+**Stream Type:** {streamtype}"""
         if message.chat.id != LOG_GROUP_ID:
             try:
                 await app.send_message(
-                    LOG_GROUP_ID,
-                    f"{logger_text}",
+                    chat_id=LOG_GROUP_ID,
+                    text=logger_text,
                     disable_web_page_preview=True,
                 )
-            except:
+            except Exception:
                 pass
         return
