@@ -4,10 +4,12 @@ asyncio
 dnspython
 ffmpeg-python
 gitpython
+gpytranslate
 hachoir
 heroku3
 lyricsgenius
-httpx==0.27.2
+httpx
+httpx[http2]
 motor
 pillow
 psutil
