@@ -24,6 +24,7 @@ playlistdb = mongodb.playlist
 blockeddb = mongodb.blockedusers
 privatedb = mongodb.privatechats
 
+playlist = []
 
 # Playlist
 
@@ -98,6 +99,11 @@ async def add_served_user(user_id: int):
     return await usersdb.insert_one({"user_id": user_id})
 
 
+async def delete_served_user(user_id: int):
+    if not await is_served_user(user_id):
+        await usersdb.delete_one({"user_id": user_id})
+
+
 # Served Chats
 
 
@@ -120,6 +126,10 @@ async def add_served_chat(chat_id: int):
     if is_served:
         return
     return await chatsdb.insert_one({"chat_id": chat_id})
+
+
+async def delete_served_chat(chat_id: int):
+    await chatsdb.delete_one({"chat_id": chat_id})
 
 
 # Blacklisted Chats
@@ -349,9 +359,7 @@ async def get_particulars(chat_id: int) -> Dict[str, int]:
     return ids["vidid"]
 
 
-async def get_particular_top(
-    chat_id: int, name: str
-) -> Union[bool, dict]:
+async def get_particular_top(chat_id: int, name: str) -> Union[bool, dict]:
     ids = await get_particulars(chat_id)
     if name in ids:
         return ids[name]
@@ -375,6 +383,10 @@ async def get_userss(chat_id: int) -> Dict[str, int]:
     return ids["vidid"]
 
 
+async def delete_userss(chat_id: int) -> bool:
+    result = await userdb.delete_one({"chat_id": chat_id})
+    return result.deleted_count > 0
+
 async def get_user_top(chat_id: int, name: str) -> Union[bool, dict]:
     ids = await get_userss(chat_id)
     if name in ids:
@@ -384,9 +396,7 @@ async def get_user_top(chat_id: int, name: str) -> Union[bool, dict]:
 async def update_user_top(chat_id: int, name: str, vidid: dict):
     ids = await get_userss(chat_id)
     ids[name] = vidid
-    await userdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"vidid": ids}}, upsert=True
-    )
+    await userdb.update_one({"chat_id": chat_id}, {"$set": {"vidid": ids}}, upsert=True)
 
 
 async def get_topp_users() -> dict:
